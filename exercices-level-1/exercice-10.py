@@ -3,3 +3,12 @@ histograma en la pantalla. Ejemplo: procedimiento([4, 9, 7]) debería imprimir l
 ****
 *********
 ******* '''
+
+
+def matriz(lista):
+    for num in lista:
+        print("*" * num)
+
+
+lista = [1, 2, 7]
+matriz(lista)

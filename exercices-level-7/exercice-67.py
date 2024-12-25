@@ -1,2 +1,16 @@
-'''Escribir un programa que pregunte una fecha en formato dd/mm/aaaa 
-y muestre por pantalla la misma fecha en formato dd de <mes> de aaaa donde <mes> es el nombre del mes.'''
+meses = ['abril', 'octubre', 'prokap', 'prokip', 'prokep']  # Lista de meses
+
+while True:
+    try:
+        pedido = input("Ingresar fecha con formato dd/mm/aaaa: ")
+        dia, mes, ano = pedido.split("/")  # Separar la fecha
+        mes = int(mes)  # Convertir el mes a un número entero
+
+        # Asegurarse de que el mes esté dentro del rango válido para tu lista
+        if 1 <= mes <= len(meses):
+            # Usar el índice del mes
+            print(f"El {dia} de {meses[mes - 1]} de {ano} nací yo")
+        else:
+            print("El mes ingresado no es válido.")
+    except ValueError:
+        print("Favor de seguir las instrucciones y usar el formato dd/mm/aaaa.")
